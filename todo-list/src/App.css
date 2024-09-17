@@ -1,0 +1,168 @@
+/* .header {
+  background-color: #f3a847;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+} */
+
+/* Container to position the logo and title */
+/* .container {
+  display: flex;
+  align-items: center;
+} */
+
+/* Logo styling */
+/* .logo {
+  width: 50px;                    Adjust size as needed
+  margin-right: 10px;
+}    */
+
+/* Title styling */
+/* .title {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+} */
+
+/* Center the list on the page */
+/* .todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+} */
+
+/* Input and button container */
+/* .todo-input-container {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+} */
+
+/* Space between input and button */
+/* .todo-input-container input {
+  flex-grow: 1;
+  margin-right: 10px;
+} */
+
+/* Custom violet button */
+/* .btn-violet {
+  background-color: #f3a847;
+  border: none;
+  color: white;
+} */
+
+/* .btn-violet:hover {
+  background-color: #8a2be2;
+} */
+
+/* Center the list and make it responsive */
+/* ul.list-group {
+  width: 100%;
+  max-width: 500px;
+} */
+
+/* .list-group-item {
+  text-align: left;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  font-family: sans-serif;
+  color: #5a3e2b;
+  font-family: "Quicksand";
+  font-weight: 500;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+h1 {
+  text-align: center;
+  background-color: #f4a226;
+  font-family: "Monoton";
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 2.4rem 0;
+}
+
+.add-form {
+  background-color: #e5771f;
+  padding: 2.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.add-form button {
+  text-transform: uppercase;
+  background-color: #76c7ad;
+}
+
+button,
+select,
+input {
+  background-color: #ffebb3;
+  color: #5a3e2b;
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.list {
+  background-color: #5a3e2b;
+  color: #ffebb3;
+  padding: 4rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.list li button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  padding: 0.8rem;
+  transform: translateY(2px);
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.stats {
+  background-color: #76c7ad;
+  text-align: center;
+  font-weight: 700;
+  padding: 3.2rem 0;
+}
