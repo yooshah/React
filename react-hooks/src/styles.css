@@ -1,0 +1,20 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.ref-test {
+  height: 200px;
+  background-color: bisque;
+  padding: 50px;
+}
+
+.reducer-test {
+  height: 200px;
+  background-color: rgb(0, 55, 0);
+  padding: 50px;
+}
+
+.count-display {
+  color: aliceblue;
+}

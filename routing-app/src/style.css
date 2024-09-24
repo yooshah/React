@@ -25,3 +25,69 @@
   color: white;
   background-color: red;
 }
+
+.blogApp-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffebb3;
+  padding: 50px;
+  gap: 20px;
+}
+
+.title-box {
+  color: #5a3e2b;
+}
+
+.inputbox {
+  background-color: #f4a226;
+}
+
+.post-btn {
+  background-color: #76c7ad;
+  height: 30px;
+  cursor: pointer;
+}
+
+.blogform {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputbox1 {
+  width: 250px;
+  height: 50px;
+}
+
+.list {
+  background-color: #5a3e2b;
+  color: #ffebb3;
+  padding: 4rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.blogitems {
+  cursor: pointer;
+}
+
+.eachitem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #76c7ad;
+  color: #5a3e2b;
+}
+
+.eachitem div {
+  font-size: 20px;
+  font-weight: 500;
+}
