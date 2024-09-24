@@ -1,0 +1,27 @@
+.home {
+  background-color: palevioletred;
+  text-align: center;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  color: black;
+  background-color: #87ceeb;
+}
+
+.register-btn {
+  color: white;
+  background-color: red;
+}

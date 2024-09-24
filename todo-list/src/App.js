@@ -36,6 +36,7 @@ function ActivityForm({ input, Addinput }) {
   const [addWork, setAddWork] = useState("");
 
   function handleAddWork(work) {
+    if (work.trim().length == 0) return;
     let id = Date.now();
     work = { work: work, completed: false, key: id };
     Addinput([...input, work]);

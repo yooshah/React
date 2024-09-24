@@ -1,3 +1,15 @@
 /steps/node_modules
 
 /todo-list/node_modules
+
+/json-test/node_modules
+
+/routing-app/node_modules
+
+/routing-app/.gitgnore
+
+/routing-app/README
+
+/routing-app/package
+
+/routing-app/package-lock
