@@ -1,3 +1,9 @@
+FurniNest
+
+redux-Learn/node_modules
+
+Note-taking-app/node_modules
+
 /steps/node_modules
 
 /todo-list/node_modules
@@ -13,3 +19,4 @@
 /routing-app/package
 
 /routing-app/package-lock
+
