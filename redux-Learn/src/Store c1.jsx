@@ -1,86 +1,91 @@
-// import { combineReducers, createStore } from "redux";
+import { combineReducers, createStore } from "redux";
 
-// //1
-// const initialAccountState = {
-//   balance: 0,
-//   loan: 0,
-//   loanPurpose: 0,
-// };
+//1
+const initialAccountState = {
+  balance: 0,
+  loan: 0,
+  loanPurpose: 0,
+};
 
-// const initialCustomerState = {
-//   fullName: "",
-//   nationalId: "",
-//   createdAt: "",
-// };
-// // Older Redux
-// //2
-// function accountReducer(state = initialAccountState, action) {
-//   switch (action.type) {
-//     case "account/deposit":
-//       return { ...state, balance: state.balance + action.payload };
+const initialCustomerState = {
+  fullName: "",
+  nationalId: "",
+  createdAt: "",
+};
+// Older Redux
+//2
 
-//     case "account/withdraw":
-//       return { ...state, balance: state.balance - action.payload };
-//     case "account/requestLoan":
-//       if (state.loan > 0) return state;
+function accountReducer(state = initialAccountState, action) {
+  switch (action.type) {
+    case "account/deposit":
+      return { ...state, balance: state.balance + action.payload };
 
-//       return {
-//         ...state,
-//         balance: state.balance + action.payload.amount,
-//         loan: action.payload.amount,
-//         loanPurpose: action.payload.purpose,
-//       };
+    case "account/withdraw":
+      return { ...state, balance: state.balance - action.payload };
+    case "account/requestLoan":
+      if (state.loan > 0) return state;
 
-//     case "account/payLoan":
-//       return {
-//         ...state,
-//         balance: state.balance - state.loan,
-//         loan: 0,
-//         loanPurpose: "",
-//       };
-//     default:
-//       return state;
-//   }
-// }
-// function customerReducer(state = initialCustomerState, action) {
-//   switch (action.type) {
-//     case "customer/createAccount":
-//       return {
-//         ...state,
-//         fullName: action.payload.fullName,
-//         nationalId: action.payload.nationalId,
-//         createdAt: new Date(),
-//       };
+      return {
+        ...state,
+        balance: state.balance + action.payload.amount,
+        loan: action.payload.amount,
+        loanPurpose: action.payload.purpose,
+      };
 
-//     case "customer/updateName":
-//       return { ...state, fullName: action.payload };
+    case "account/payLoan":
+      return {
+        ...state,
+        balance: state.balance - state.loan,
+        loan: 0,
+        loanPurpose: "",
+      };
+    default:
+      return state;
+  }
+}
+function customerReducer(state = initialCustomerState, action) {
+  switch (action.type) {
+    case "customer/createAccount":
+      return {
+        ...state,
+        fullName: action.payload.fullName,
+        nationalId: action.payload.nationalId,
+        createdAt: new Date(),
+      };
 
-//     default:
-//       return state;
-//   }
-// }
+    case "customer/updateName":
+      return { ...state, fullName: action.payload };
 
-// //3
-// const rootReducer = combineReducers({
-//   customer: customerReducer,
-//   account: accountReducer,
+    default:
+      return state;
+  }
+}
+
+//3
+
+const rootReducer = combineReducers({
+  customer: customerReducer,
+  account: accountReducer,
+});
+const store = createStore(rootReducer);
+
+//const store = createStore(accountReducer);
+
+// export default store;
+//4
+store.dispatch({ type: "account/deposit", payload: 5000 });
+// console.log(store.getState());
+// store.dispatch({ type: "account/withdraw", payload: 1000 });
+// console.log(store.getState());
+// store.dispatch({
+//   type: "account/requestLoan",
+//   payload: { amount: 3000, purpose: "For a Trip" },
 // });
-// const store = createStore(rootReducer);
-
-// //4
-// // store.dispatch({ type: "account/deposit", payload: 5000 });
-// // console.log(store.getState());
-// // store.dispatch({ type: "account/withdraw", payload: 1000 });
-// // console.log(store.getState());
-// // store.dispatch({
-// //   type: "account/requestLoan",
-// //   payload: { amount: 3000, purpose: "For a Trip" },
-// // });
-// // console.log(store.getState());
-// // store.dispatch({ type: "account/deposit", payload: 5000 });
-// // console.log(store.getState());
-// // store.dispatch({ type: "account/payLoan" });
-// // console.log(store.getState());
+// console.log(store.getState());
+// store.dispatch({ type: "account/deposit", payload: 5000 });
+// console.log(store.getState());
+// store.dispatch({ type: "account/payLoan" });
+// console.log(store.getState());
 
 // //5 creating Action  creator
 // function createCustomer(fullName, nationalId) {
